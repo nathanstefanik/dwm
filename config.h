@@ -83,7 +83,7 @@ static const char *browsercmd[]   = { "firefox", NULL };
 static const char *voldown[]	    = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL};
 static const char *volup[]	      = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL};
 static const char *volmute[]	    = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
-static const char *passcmd[]      = { "passmenu", NULL };
+static const char *passcmd[]      = { "keepmenu", NULL };
 static const char *mpvcmd[]       = { "mpvclip", NULL };
 static const char *shutdowncmd[]  = { "shutdown", "-h", "now", NULL };
 
