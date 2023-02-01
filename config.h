@@ -86,6 +86,7 @@ static const char *volmute[]	    = { "pactl", "set-sink-mute", "@DEFAULT_SINK@",
 static const char *passcmd[]      = { "keepmenu", NULL };
 static const char *mpvcmd[]       = { "mpvclip", NULL };
 static const char *shutdowncmd[]  = { "shutdown", "-h", "now", NULL };
+static const char *insomnia[]     = { "insomnia.py", NULL };
 
 #include "patches/shift-tools.c"
 #include "patches/push.c"
@@ -98,6 +99,7 @@ static Key keys[] = {
   { MODKEY,                       XK_v,      spawn,          {.v = mpvcmd } },
   { MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = shutdowncmd } },
   { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
+  { MODKEY,                       XK_a,      spawn,          {.v = insomnia } },
   { MODKEY,                       XK_c,      spawn,          SHCMD("codium") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ ALTKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
