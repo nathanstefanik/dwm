@@ -83,10 +83,9 @@ static const char *browsercmd[]   = { "firefox", NULL };
 static const char *voldown[]	    = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL};
 static const char *volup[]	      = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL};
 static const char *volmute[]	    = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL};
-static const char *passcmd[]      = { "keepmenu", NULL };
+static const char *passcmd[]      = { "passmenu", NULL };
 static const char *mpvcmd[]       = { "mpvclip", NULL };
 static const char *shutdowncmd[]  = { "shutdown", "-h", "now", NULL };
-static const char *insomnia[]     = { "insomnia.py", NULL };
 
 #include "patches/shift-tools.c"
 #include "patches/push.c"
@@ -99,7 +98,6 @@ static Key keys[] = {
   { MODKEY,                       XK_v,      spawn,          {.v = mpvcmd } },
   { MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = shutdowncmd } },
   { MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
-  { MODKEY,                       XK_a,      spawn,          {.v = insomnia } },
   { MODKEY,                       XK_c,      spawn,          SHCMD("codium") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ ALTKEY,                       XK_Tab,    focusstack,     {.i = +1 } },
@@ -116,7 +114,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
   { ALTKEY,                       XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
